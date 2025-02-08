@@ -42,7 +42,7 @@ public class DoctorApiSteps {
             responseStatus = HttpStatus.OK;
         } catch (RestClientResponseException ex) {
             responseBody = ex.getResponseBodyAsString();
-            responseStatus = HttpStatus.valueOf(ex.getRawStatusCode());
+            responseStatus = HttpStatus.valueOf(ex.getStatusCode().value());
         }
     }
 
