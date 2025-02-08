@@ -39,7 +39,7 @@ public class DoctorApiSteps {
                     .retrieve()
                     .body(String.class);
 
-            responseStatus = HttpStatus.OK; // Assuming a successful response
+            responseStatus = HttpStatus.OK;
         } catch (RestClientResponseException ex) {
             responseBody = ex.getResponseBodyAsString();
             responseStatus = HttpStatus.valueOf(ex.getRawStatusCode());
